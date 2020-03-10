@@ -4,6 +4,8 @@ roomanager DB設計
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false ,unique: true|
+|email|string|null: false , unique: true|
+|password|string|null: false , unique: true|
 |buddget|integer|null: false|
 ### Association
 - has_many :rooms
