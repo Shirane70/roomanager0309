@@ -1,7 +1,7 @@
 /* ヘッダー */
 
 header {
-  background-color: #2d5eb7;
+  background-color: goldenrod;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -58,13 +58,13 @@ a {
   font-size: 20px;
   color: #fff;
   text-decoration: none;
-  background-color: #ffa201;
+  background-color: goldenrod;
   margin-top: 40px;
   border-radius: 27px;
 }
 
 .cta-btn:hover {
-  box-shadow: 0 0 10px #ffa201;
+  box-shadow: 0 0 10px gold;
 }
 
 /* カードリスト */
