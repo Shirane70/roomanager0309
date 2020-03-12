@@ -9,24 +9,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1><a href="/">Roomanager</a></h1>
-    <nav>
-      <ul class="header-links">
-        <li class="header-link"><a href="#">About</a></li>
-        <li class="header-link"><a href="#">ログイン</a></li>
-        <li class="header-link"><a href="#">新規登録</a></li>
-      </ul>
-    </nav>
-  </header>
+<%= render 'shared/header' %>
   <main>
     <section class="fv-section">
       <p class="main-copy">またつまらぬものを買ってしまったあなたに</p>
       <p class="fv-text">計画的な買い物の推進ツール</p>
       <a href="#" class="cta-btn">使ってみる</a>
   </main>
-  <footer>
-    <small>Shiranation all rights reserved</small>
-  </footer>
+<%= render 'shared/footer' %>
 </body>
 </html>

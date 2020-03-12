@@ -28,11 +28,15 @@ a {
   margin-left: 30px;
 }
 
+.header__right--btn {
+  margin-left: 30px;
+}
+
 /* ファーストビュー */
 
 .fv-section {
   height: 600px;
-  background-image: url(hero-img.png);
+  background-image: url();
   background-size: cover;
   background-position: center;
   display: flex;
