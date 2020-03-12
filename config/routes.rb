@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to: "informations#index"
+  resources :informations, only: [:index, :show]
 
   devise_for :users, controllers: {
     registrations: 'users/registrations',
