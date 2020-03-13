@@ -1,29 +1,40 @@
 .mypage {
   height: 100%;
   display: flex;
-  text-align: left;
-  
-  .action {
-    width: 300px;
-    height: 600px;
-    border: solid plum;
-    margin: 10px;
-    
-  }
-
-  .myhouse {
-    width: 800px;
+  text-align: center;
+  .indoor {
+    width: 1000px;
     height:600px;
     border: solid palegreen;
     margin: 10px;
+    .indoor_header {
+      background-color:palegreen;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      color: #fff;
+    }
   }
 
-  .seller {
-    width: 300px;
-    height: 600px;
-    border: solid bisque;
-    margin: 10px;
-    color: black;
 
+  .outdoor {
+    width: 600px;
+    height: 600px;
+    border: solid plum;
+    margin: 10px;
+    .outdoor_header {
+      background-color: plum;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      color: #fff;
+    }
+    .outdoor_main {
+      text-align: left;
+    }
   }
 }

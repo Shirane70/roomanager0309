@@ -12,26 +12,44 @@
 <%= render 'shared/header' %>
   <main>
     <section class="mypage">
-      <div class="action">収支関係</div>
-        
-      <div class="myhouse">居室関係</div>
+      <div class="indoor">
+        <div class= "indoor_header">
+          <p1>居室情報</p1>
+          <nav>
+            <ul class="header-links">
+              <% if user_signed_in? %>
+                <%= link_to "######", edit_user_registration_path, class: "header__right--btn" %>
+                <%= link_to "######", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
+              <% else %>
+                <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
+                <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
 
-      <div class="seller">購買先一覧
-        <p>
-          家具家電
-          <a href="https://www.yamada-denki.jp/store/contents/?d=128">テックランドNew野並店</a>
-        </p>
-        <p>
-          <a href="https://itunes.apple.com">App Store</a>
-          <a href="https://store.google.com">Google Play</a>
-        </p>
       </div>
 
+      <div class="outdoor">
+        <div class= "outdoor_header">
+          <p1>店舗情報</p1>
+          <nav>
+            <ul class="header-links">
+              <% if user_signed_in? %>
+                <%= link_to "######", edit_user_registration_path, class: "header__right--btn" %>
+                <%= link_to "######", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
+              <% else %>
+                <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
+                <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
+        <div class= "outdoor_main">
+        <a href="https://www.yamada-denki.jp/store/contents/?d=128">ヤマダ電機（テックランドNew野並店）</a><br>
+        <a href="https://www.kahma.co.jp/shop/detail?shop=228">DCMカーマ鳴海店</a><br>
 
-
-
-
-
+      </div>
   </main>
 <%= render 'shared/footer' %>
 </body>
