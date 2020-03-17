@@ -12,8 +12,8 @@
 <%= render 'shared/header' %>
   <main>
     <section class="mypage">
-      <div class="indoor">
-        <div class= "indoor_header">
+      <div class="room">
+        <div class= "room_header">
           <p1>居室情報</p1>
           <nav>
             <ul class="header-links">
@@ -22,10 +22,6 @@
                 <%= link_to "登録削除", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
                 <%= link_to "登録変更", edit_user_registration_path, class: "header__right--btn" %>
                 <%= link_to "新規登録", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
-
-              <% else %>
-                <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
-                <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
               <% end %>
             </ul>
           </nav>
@@ -33,25 +29,21 @@
 
       </div>
 
-      <div class="outdoor">
-        <div class= "outdoor_header">
-          <p1>店舗情報</p1>
+      <div class="item">
+        <div class= "item_header">
+          <p1>商品情報</p1>
           <nav>
             <ul class="header-links">
               <% if user_signed_in? %>
-                <%= link_to "店舗検索", edit_user_registration_path, class: "header__right--btn" %>
-                <%= link_to "店舗登録", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
-              <% else %>
-                <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
+                <%= link_to "登録詳細", edit_user_registration_path, class: "header__right--btn" %>
+                <%= link_to "登録削除", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
+                <%= link_to "登録変更", new_user_session_path, class: "header__right--btn" %>
                 <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
               <% end %>
             </ul>
           </nav>
         </div>
         <div class= "outdoor_main">
-        <a href="https://www.yamada-denki.jp/store/contents/?d=128">ヤマダ電機（テックランドNew野並店）</a><br>
-        <a href="https://www.kahma.co.jp/shop/detail?shop=228">DCMカーマ鳴海店</a><br>
-
       </div>
   </main>
 <%= render 'shared/footer' %>

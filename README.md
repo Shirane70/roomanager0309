@@ -17,6 +17,7 @@ roomanager DB設計
 |name|string|null: false|
 |cost|integer|null:false|
 |change|date|null:false|
+|img|text||
 ### Association
 - belongs_to :user
 - has_many :items
@@ -29,6 +30,7 @@ roomanager DB設計
 |name|string|null: false|
 |cost|integer|null:false|
 |change|date|null:false|
+|img|text||
 ### Association
 - belongs_to :user
 - belongs_to :room
