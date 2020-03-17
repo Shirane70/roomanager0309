@@ -1,0 +1,16 @@
+<div class= "room_sider">
+  <% @rooms.each do |room| %>
+    <div class="type">
+      <%= room.type %>
+    </div>
+    <div class="cost">
+      <%= room.cost %>
+    </div>
+    <div class="change">
+      <%= room.change %>
+    </div>
+    <div class="img">
+      <%= room.img %>
+    </div>
+  <% end %>
+</div>

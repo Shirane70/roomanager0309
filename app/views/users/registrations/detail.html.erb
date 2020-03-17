@@ -14,31 +14,29 @@
     <section class="mypage">
       <div class="room">
         <div class= "room_header">
-          <p1>居室情報</p1>
+          <%= link_to "居室情報", rooms_path, class: "header__right--btn" %>
           <nav>
             <ul class="header-links">
               <% if user_signed_in? %>
-                <%= link_to "登録詳細", edit_user_registration_path, class: "header__right--btn" %>
-                <%= link_to "登録削除", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
-                <%= link_to "登録変更", edit_user_registration_path, class: "header__right--btn" %>
-                <%= link_to "新規登録", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
+                <%= link_to "登録詳細", room_path, class: "header__right--btn" %>
+                <%= link_to "登録削除", rooms_path, class: "header__right--btn" %>
+                <%= link_to "登録変更", edit_room_path, class: "header__right--btn" %>
+                <%= link_to "新規登録", new_room_path, class: "header__right--btn" %>
               <% end %>
             </ul>
           </nav>
         </div>
-
       </div>
-
       <div class="item">
         <div class= "item_header">
           <p1>商品情報</p1>
           <nav>
             <ul class="header-links">
               <% if user_signed_in? %>
-                <%= link_to "登録詳細", edit_user_registration_path, class: "header__right--btn" %>
-                <%= link_to "登録削除", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
-                <%= link_to "登録変更", new_user_session_path, class: "header__right--btn" %>
-                <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
+                <%= link_to "登録詳細", item_path, class: "header__right--btn" %>
+                <%= link_to "登録削除", items_path, class: "header__right--btn" %>
+                <%= link_to "登録変更", edit_item_path, class: "header__right--btn" %>
+                <%= link_to "新規登録", new_item_path, class: "header__right--btn" %>
               <% end %>
             </ul>
           </nav>
