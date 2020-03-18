@@ -1,16 +1,67 @@
-<div class= "room_sider">
-  <% @rooms.each do |room| %>
-    <div class="type">
-      <%= room.type %>
-    </div>
-    <div class="cost">
-      <%= room.cost %>
-    </div>
-    <div class="change">
-      <%= room.change %>
-    </div>
-    <div class="img">
-      <%= room.img %>
-    </div>
-  <% end %>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Roomanager</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <%= render 'shared/header' %>
+    <main>
+        <section class="mypage">
+            <div class="balance">
+                <div class="balance_header">
+                    <% if user_signed_in? %>
+                    <%= link_to "収支情報" ,  class: "header__right--btn" %>
+                    <%= link_to "新規登録",   class: "header__right--btn" %>
+                    <% end %>
+                </div>
+                <div class="balance_sider">
+                </div>
+            </div>
+
+            <div class="room">
+                <div class="room_header">
+                    <% if user_signed_in? %>
+                    <%= link_to "居室情報", rooms_path, class: "header__right--btn" %>
+                    <%= link_to "新規登録", new_room_path, class: "header__right--btn" %>
+                    <% end %>
+                </div>
+                <div class="room_sider">
+                    <% @rooms.each do |room| %>
+                    <div class="room_name">
+                        <%= room.room_name %>
+                    </div>
+                    <div class="room_cost">
+                        <%= room.room_cost %>
+                    </div>
+                    <div class="room_change">
+                        <%= room.room_change %>
+                    </div>
+                    <div class="room_img">
+                        <%= room.room_img %>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_header">
+                    <% if user_signed_in? %>
+                    <%= link_to "商品情報", items_path, class: "header__right--btn" %>
+                    <%= link_to "新規登録", new_item_path, class: "header__right--btn" %>
+                    <% end %>
+                </div>
+                <div class="item_sider">
+                </div>
+            </div>
+    </main>
+    <%= render 'shared/footer' %>
+</body>
+
+</html>

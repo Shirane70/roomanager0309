@@ -14,10 +14,10 @@ roomanager DB設計
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|foreign_key :true|
-|name|string|null: false|
-|cost|integer|null:false|
-|change|date|null:false|
-|img|text||
+|room_name|string|null: false|
+|room_cost|integer|null:false|
+|room_change|date|null:false|
+|room_img|text||
 ### Association
 - belongs_to :user
 - has_many :items
@@ -27,10 +27,10 @@ roomanager DB設計
 |------|----|-------|
 |user_id|integer|foreign_key :true|
 |room_id|integer|foreign_key :true|
-|name|string|null: false|
-|cost|integer|null:false|
-|change|date|null:false|
-|img|text||
+|item_name|string|null: false|
+|item_cost|integer|null:false|
+|item_change|date|null:false|
+|item_img|text||
 ### Association
 - belongs_to :user
 - belongs_to :room

@@ -1,0 +1,86 @@
+/* ヘッダー */
+
+header {
+  background-color: goldenrod;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-links {
+  list-style: none;
+  display: flex;
+}
+
+.header-link {
+  margin-left: 30px;
+}
+
+.header__right--btn {
+  margin-left: 30px;
+  color: #fff;
+}
+
+/* ファーストビュー */
+
+.mypage {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  .room {
+    width: 800px;
+    height:600px;
+    border: solid palegreen;
+    margin: 10px;
+    .room_header {
+      background-color:palegreen;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      color: #fff;
+    }
+    .room_sider {
+      text-align: left;
+    }
+  }
+
+
+  .item {
+    width: 800px;
+    height: 600px;
+    border: solid plum;
+    margin: 10px;
+    .item_header {
+      background-color: plum;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 60px;
+      color: #fff;
+    }
+  }
+}
+
+/* フッター */
+
+footer {
+  line-height: 80px;
+  text-align: center;
+  background-color: goldenrod;
+  color: #fff;
+}

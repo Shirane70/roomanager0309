@@ -15,20 +15,20 @@ ActiveRecord::Schema.define(version: 2020_03_17_091801) do
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "room_id", null: false
-    t.string "name", null: false
-    t.integer "cost", null: false
-    t.date "change", null: false
-    t.text "img"
+    t.string "item_name", null: false
+    t.integer "item_cost", null: false
+    t.date "item_change", null: false
+    t.text "item_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.string "type"
-    t.integer "cost"
-    t.date "change"
-    t.text "img"
+    t.string "room_name"
+    t.integer "room_cost"
+    t.date "room_change"
+    t.text "room_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

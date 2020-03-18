@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Roomanager</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Roomanager</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<%= render 'shared/header' %>
-  <main>
-    <section class="mypage">
-      <div class="room">
-        <div class= "room_header">
-          <%= link_to "居室情報", rooms_path, class: "header__right--btn" %>
-          <nav>
-            <ul class="header-links">
-              <% if user_signed_in? %>
-                <%= link_to "登録詳細", room_path, class: "header__right--btn" %>
-                <%= link_to "登録削除", rooms_path, class: "header__right--btn" %>
-                <%= link_to "登録変更", edit_room_path, class: "header__right--btn" %>
-                <%= link_to "新規登録", new_room_path, class: "header__right--btn" %>
-              <% end %>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div class="item">
-        <div class= "item_header">
-          <p1>商品情報</p1>
-          <nav>
-            <ul class="header-links">
-              <% if user_signed_in? %>
-                <%= link_to "登録詳細", item_path, class: "header__right--btn" %>
-                <%= link_to "登録削除", items_path, class: "header__right--btn" %>
-                <%= link_to "登録変更", edit_item_path, class: "header__right--btn" %>
-                <%= link_to "新規登録", new_item_path, class: "header__right--btn" %>
-              <% end %>
-            </ul>
-          </nav>
-        </div>
-        <div class= "outdoor_main">
-      </div>
-  </main>
-<%= render 'shared/footer' %>
+    <%= render 'shared/header' %>
+    <main>
+        <section class="mypage">
+            <div class="balance">
+                <div class="balance_header">
+                    <% if user_signed_in? %>
+                    <%= link_to "収支情報" ,  class: "header__right--btn" %>
+                    <%= link_to "新規登録",   class: "header__right--btn" %>
+                    <% end %>
+                </div>
+                <div class="balance_sider">
+                </div>
+            </div>
+
+            <div class="room">
+                <div class="room_header">
+                    <% if user_signed_in? %>
+                    <%= link_to "居室情報", rooms_path, class: "header__right--btn" %>
+                    <%= link_to "新規登録", new_room_path, class: "header__right--btn" %>
+                    <% end %>
+                </div>
+                <div class="room_sider">
+
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_header">
+                    <% if user_signed_in? %>
+                    <%= link_to "商品情報", items_path, class: "header__right--btn" %>
+                    <%= link_to "新規登録", new_item_path, class: "header__right--btn" %>
+                    <% end %>
+                </div>
+                <div class="item_sider">
+                </div>
+            </div>
+    </main>
+    <%= render 'shared/footer' %>
 </body>
+
 </html>
